@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>js基本包装类型 | cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js基本包装类型 三种特殊的引用类型：Boolean、Number、String  1234567var value &#x3D; &quot;25&quot;;var number &#x3D; Number(value);     &#x2F;&#x2F;转型函数alert(typeof number);var obj &#x3D; new Number(value);    &#x2F;&#x2F;构造函数alert(typeof obj);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基本包装类型">
+<meta property="og:url" content="http://example.com/2018/05/07/js/js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:description" content="js基本包装类型 三种特殊的引用类型：Boolean、Number、String  1234567var value &#x3D; &quot;25&quot;;var number &#x3D; Number(value);     &#x2F;&#x2F;转型函数alert(typeof number);var obj &#x3D; new Number(value);    &#x2F;&#x2F;构造函数alert(typeof obj);">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-05-07T11:30:46.000Z">
+<meta property="article:modified_time" content="2021-04-04T10:51:55.000Z">
+<meta property="article:author" content="v">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js/js基本包装类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/07/js/js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2018-05-07T11:30:46.000Z" itemprop="datePublished">2018-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js基本包装类型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="js基本包装类型"><a href="#js基本包装类型" class="headerlink" title="js基本包装类型"></a>js基本包装类型</h5><ul>
+<li>三种特殊的引用类型：Boolean、Number、String</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> value = <span class="string">&quot;25&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> number = <span class="built_in">Number</span>(value);     <span class="comment">//转型函数</span></span><br><span class="line">alert(<span class="keyword">typeof</span> number);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Number</span>(value);    <span class="comment">//构造函数</span></span><br><span class="line">alert(<span class="keyword">typeof</span> obj);              <span class="comment">//&quot;object&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Boolean 类型</li>
+</ul>
+<p>Boolean理性是与布尔类型对应的引用类型。要创建Boolean对象，可以像下面这样调用Boolean构造函数并传入true或false值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> booleanObject = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Boolean 类型的实例重写了valueOf方法，返回接班类型值true或false；重写了toString()方法，返回字符串”true”和”false”.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> falseObject = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);   <span class="comment">//false typeOf -&gt; object</span></span><br><span class="line"><span class="keyword">var</span> result = falseObject &amp;&amp; <span class="literal">true</span>;</span><br><span class="line">alert(result);          <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> falseValue = <span class="literal">false</span>;</span><br><span class="line">result = falseValue &amp;&amp; <span class="literal">true</span>;</span><br><span class="line">alert(result);      <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">typeof</span> falseObject);      <span class="comment">//object</span></span><br><span class="line">alert(<span class="keyword">typeof</span> falseValue);       <span class="comment">//boolean</span></span><br><span class="line">alert(falseObject <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>);      <span class="comment">//true</span></span><br><span class="line">alert(falseValue <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>);       <span class="comment">//false</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>[布尔表达式中所有的对象都会被转换为true ] </li>
+<li>[理解基本类型的布尔值与Boolean对象之间的区别非常重要–当然，我们建议永远不要使用Boolean对象 ] </li>
+<li>Number 类型<br>Number是与数字值对应的引用类型。与Boolean类型一样，Number类型也重写了valueOf()、toLocaleString()和toString()方法。</li>
+</ul>
+<ul>
+<li><ul>
+<li>toString() 返回几进制数值的字符串<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> num = <span class="number">10</span>;       <span class="comment">//toString（）返回几进制数值的字符串</span></span><br><span class="line"></span><br><span class="line">alert(num.toString());      <span class="comment">//&quot;10&quot;</span></span><br><span class="line">alert(num.toString(<span class="number">2</span>));      <span class="comment">//&quot;1010&quot;</span></span><br><span class="line">alert(num.toString(<span class="number">8</span>));      <span class="comment">//&quot;12&quot;</span></span><br><span class="line">alert(num.toString(<span class="number">10</span>));      <span class="comment">//&quot;10&quot;</span></span><br><span class="line">alert(num.toString(<span class="number">16</span>));      <span class="comment">//&quot;a&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><ul>
+<li>toFixed 按指定的小数位返回数值的字符串</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10.005</span>;</span><br><span class="line">alert(num.toFixed(<span class="number">2</span>));      <span class="comment">//&quot;10.01&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ul>
+<li>toExponential() 格式化数值，以指数表示法（e表示法）表示数值的字符串形式。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">10</span> ;</span><br><span class="line">alert(num.toExponential(<span class="number">1</span>));        <span class="comment">//&quot;1.0e+1&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>toPrecision()  返回固定大小（fixed）格式，也可能返回指数（exponential）格式；</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">99</span>;</span><br><span class="line">alert(num.toPrecision(<span class="number">1</span>));      <span class="comment">//&quot;1e+2&quot;</span></span><br><span class="line">alert(num.toPrecision(<span class="number">20</span>));     <span class="comment">//&quot;99&quot;</span></span><br><span class="line">alert(num.toPrecision(<span class="number">3</span>));      <span class="comment">//&quot;99.0&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>String 类型  字符串的对象包装类型</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringObject = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">alert(stringObject.length);         <span class="comment">//&quot;11&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>字符方法  charAt()和charCodeAt()</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringValue = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">alert(<span class="string">&quot;stringValue.charAt(1)&quot;</span>);         <span class="comment">//&quot;e&quot; -&gt;字符</span></span><br><span class="line"></span><br><span class="line">alert(stringValue.charCodeAt(<span class="number">1</span>));       <span class="comment">//输出 &quot;101&quot; e字符编码</span></span><br><span class="line"></span><br><span class="line">alert(stringValue[<span class="number">1</span>]);                  <span class="comment">//&quot;e&quot;  字符串特定字符</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>-字符串操作方法 concat(),拼接字符串返回新的字符串</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringValue = <span class="string">&quot;hello &quot;</span>;</span><br><span class="line"><span class="keyword">var</span> result = stringValue.concat(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">alert(result);          <span class="comment">//&quot;hello world&quot;</span></span><br><span class="line">alert(stringValue);     <span class="comment">//&quot;hello&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result1 = stringValue.concat(<span class="string">&quot;world&quot;</span>+<span class="string">&quot;!&quot;</span>);</span><br><span class="line">alert(result1);         <span class="comment">//&quot;hello world!&quot;</span></span><br><span class="line">alert(stringValue);     <span class="comment">//&quot;hello&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>slice()、substr()、subString()</li>
+</ul>
+</li>
+</ul>
+<p>slice()方法会将传入的负值与字符串长度相加，substr()方法将负的第一个参数加上字符串的长度，而将负的第二个参数转换为0.substring()方法会把所有的负值参数都转换为0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringValue = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">alert(stringValue.slice(-<span class="number">3</span>));               <span class="comment">//&quot;rld&quot;</span></span><br><span class="line">alert(stringValue.substring(-<span class="number">3</span>));           <span class="comment">//&quot;hello world&quot;</span></span><br><span class="line">alert(stringValue.substr(-<span class="number">3</span>));              <span class="comment">//&quot;rld&quot;</span></span><br><span class="line">alert(stringValue.slice(<span class="number">3</span>,-<span class="number">4</span>));             <span class="comment">//&quot;lo w&quot;</span></span><br><span class="line">alert(stringValue.substring(<span class="number">3</span>,-<span class="number">4</span>));         <span class="comment">//&quot;hel&quot;</span></span><br><span class="line">alert(stringValue.substr(<span class="number">3</span>,-<span class="number">4</span>));            <span class="comment">//&quot;&quot; (空字符串)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>字符串位置方法 indexOf() 从头搜索、lastIndexOf()从末尾搜索</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringValue = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">alert(stringValue.indexOf(<span class="string">&quot;o&quot;</span>));            <span class="comment">//4</span></span><br><span class="line">alert(stringValue.lastIndexOf(<span class="string">&quot;o&quot;</span>));        <span class="comment">//7</span></span><br><span class="line"></span><br><span class="line">&lt;!--俩个参数--&gt;</span><br><span class="line">alert(stringValue.indexOf(<span class="string">&quot;o&quot;</span>,<span class="number">6</span>));          <span class="comment">//7 从第6位开始向后搜索</span></span><br><span class="line">alert(stringValue.lastIndexOf(<span class="string">&quot;o&quot;</span>,<span class="number">6</span>));      <span class="comment">//4 从第6位开始向前搜索</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><ul>
+<li>查找字符串所有字符（一个）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stringValue = <span class="string">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> positions = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> pos = stringValue.indexOf(<span class="string">&quot;e&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(pos &gt; -<span class="number">1</span>)&#123;</span><br><span class="line">    positions.push(pos);</span><br><span class="line">    pos = stringValue.indexOf(<span class="string">&quot;e&quot;</span>,pos+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">alert(positions);           <span class="comment">//&quot;3,24,32,35,52&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/05/07/js/js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/" data-id="ckn31pgs40071yas689w89knn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/08/js/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          js创建对象
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/07/js/js%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

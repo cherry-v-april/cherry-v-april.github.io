@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="cherry">
+<meta property="og:url" content="http://example.com/page/15/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="v">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-java/java_cookie存信息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/23/java/java_cookie%E5%AD%98%E4%BF%A1%E6%81%AF/" class="article-date">
+  <time datetime="2017-12-23T03:06:06.000Z" itemprop="datePublished">2017-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/23/java/java_cookie%E5%AD%98%E4%BF%A1%E6%81%AF/">cookie存储信息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="cookie-存信息"><a href="#cookie-存信息" class="headerlink" title="cookie 存信息"></a>cookie 存信息</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">request.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">		String name = request.getParameter(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">		name = java.net.URLEncoder.encode(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">		Cookie cookie = <span class="keyword">new</span> Cookie(<span class="string">&quot;username&quot;</span>, name);</span><br><span class="line">		<span class="comment">//设置过期时间，单位秒</span></span><br><span class="line">		cookie.setMaxAge(<span class="number">60</span>);</span><br><span class="line">		<span class="comment">//保存到客户端cookie</span></span><br><span class="line">		response.addCookie(cookie);</span><br><span class="line">		request.getRequestDispatcher(<span class="string">&quot;succes.jsp&quot;</span>).forward(request, response);</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取cookie<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Cookie cookiearr[] = request.getcookies();</span><br><span class="line"><span class="keyword">for</span> (Cookie cookie : cookiearr) &#123;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/23/java/java_cookie%E5%AD%98%E4%BF%A1%E6%81%AF/" data-id="ckn31pgrl005qyas6051hdjh0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_数组2字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/22/java/java_%E6%95%B0%E7%BB%842%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2017-12-22T13:29:39.000Z" itemprop="datePublished">2017-12-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/22/java/java_%E6%95%B0%E7%BB%842%E5%AD%97%E7%AC%A6%E4%B8%B2/">java数组to字符串</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="array2string"><a href="#array2string" class="headerlink" title="array2string"></a>array2string</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">		String str = <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			str+=String.valueOf(arr[i]);</span><br><span class="line">			<span class="keyword">if</span>(i&lt;arr.length-<span class="number">1</span>) &#123;</span><br><span class="line">				str+=<span class="string">&quot;,&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(str);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>整型转化为字符串</li>
+<li><ul>
+<li>String.valueOf()</li>
+</ul>
+</li>
+<li><ul>
+<li>integer.toString()</li>
+</ul>
+</li>
+<li><ul>
+<li>integer.valueOf().toString() </li>
+</ul>
+</li>
+<li>字符串转化整型</li>
+<li><ul>
+<li>integer.valueOf()</li>
+</ul>
+</li>
+<li><ul>
+<li>integer.parseInt()</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/22/java/java_%E6%95%B0%E7%BB%842%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckn31pgrv006cyas6cjbd6s0e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_interface" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/16/java/java_interface/" class="article-date">
+  <time datetime="2017-12-16T12:15:07.000Z" itemprop="datePublished">2017-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/16/java/java_interface/">interface</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="interface"><a href="#interface" class="headerlink" title="interface"></a>interface</h4><ul>
+<li>接口（interface）抽象方法和常量值定义的集合.</li>
+<li>本质：特殊的抽象类——只包含常量和方法的定义,没有变量和方法的实现.<h5 id="接口的属性（成员变量）"><a href="#接口的属性（成员变量）" class="headerlink" title="接口的属性（成员变量）"></a>接口的属性（成员变量）</h5></li>
+<li>声明成“public static final 类型 属性名”，默认也是声明成“public static final”即里面的成员变量都是公共的、静态的，不能改变的.<h5 id="接口方法"><a href="#接口方法" class="headerlink" title="接口方法"></a>接口方法</h5></li>
+<li>在接口里面的声明的方法都是抽象方法，因此在接口里面的抽象方法都会把abstract关键字省略掉，因为默认声明的方法都是抽象的，所以就没有必要再写“abstract”字了，这一点与在抽象类里面声明抽象方法时有所区别，在抽象类里面声明抽象方法是一定要使用“abstract”关键字的，而在接口里面声明抽象方法可以省略掉“abstract”.</li>
+<li>在接口里面声明的抽象方法默认是“public(公共的)”的<h4 id="接口特点："><a href="#接口特点：" class="headerlink" title="接口特点："></a>接口特点：</h4></li>
+</ul>
+<ol>
+<li>可以实现多继承.</li>
+<li>默认属性为public static final，也只能是public static final.</li>
+<li>只能定义抽象方法,默认为public的.</li>
+<li>接口可以继承其它接口,添加新的属性和抽象方法.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Singer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sing</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">()</span></span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+接口和接口之间可以相互继承，类和类之间可以相互继承，类和接口之间，只能是类来实现接口.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/16/java/java_interface/" data-id="ckn31pgrq005yyas69kzgfgt4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_TreeMap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/10/java/java_TreeMap/" class="article-date">
+  <time datetime="2017-12-10T02:40:03.000Z" itemprop="datePublished">2017-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/10/java/java_TreeMap/">TreeMap</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">		TreeMap&lt;String, Object&gt; treeMap = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">		</span><br><span class="line">		treeMap.put(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;b&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;2&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;5&quot;</span>, <span class="string">&quot;d&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;4&quot;</span>, <span class="string">&quot;e&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		Set keySet = treeMap.keySet();</span><br><span class="line">		Iterator it = keySet.iterator();</span><br><span class="line">		<span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">			Object key = it.next();</span><br><span class="line">			Object value = treeMap.get(key);</span><br><span class="line">			System.out.println(key+<span class="string">&quot;:&quot;</span>+value);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">輸出：</span><br><span class="line"><span class="number">1</span>:a</span><br><span class="line"><span class="number">2</span>:c</span><br><span class="line"><span class="number">3</span>:b</span><br><span class="line"><span class="number">4</span>:e</span><br><span class="line"><span class="number">5</span>:d		</span><br></pre></td></tr></table></figure>
+<ul>
+<li>EntrySet迭代<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">TreeMap&lt;String, Object&gt; treeMap = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">		</span><br><span class="line">		treeMap.put(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;b&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;2&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;5&quot;</span>, <span class="string">&quot;d&quot;</span>);</span><br><span class="line">		treeMap.put(<span class="string">&quot;4&quot;</span>, <span class="string">&quot;e&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		Set&lt;Entry&lt;String,Object&gt;&gt; entrySet = treeMap.entrySet();</span><br><span class="line">		Iterator&lt;Entry&lt;String, Object&gt;&gt; iterator = entrySet.iterator();</span><br><span class="line">		<span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">			Map.Entry&lt;String, Object&gt; entry = iterator.next();</span><br><span class="line">			String key = entry.getKey();</span><br><span class="line">			Object value = entry.getValue();</span><br><span class="line">			</span><br><span class="line">			System.out.println(key+<span class="string">&quot; : &quot;</span>+value);</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">输出：</span><br><span class="line"><span class="number">1</span> : a</span><br><span class="line"><span class="number">2</span> : c</span><br><span class="line"><span class="number">3</span> : b</span><br><span class="line"><span class="number">4</span> : e</span><br><span class="line"><span class="number">5</span> : d</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/10/java/java_TreeMap/" data-id="ckn31pgrk005nyas645oyc8zf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_map遍历" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/09/java/java_map%E9%81%8D%E5%8E%86/" class="article-date">
+  <time datetime="2017-12-09T12:32:24.000Z" itemprop="datePublished">2017-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/09/java/java_map%E9%81%8D%E5%8E%86/">map遍历</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="map遍历"><a href="#map遍历" class="headerlink" title="map遍历"></a>map遍历</h3><h4 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h4><ul>
+<li><p>存储键值映射关系,不能出现重复的键,可以允许键值为null,</p>
+</li>
+<li><p>通过put、get存取元素,如果有键形同则覆盖其值,</p>
+</li>
+<li><p>通过keySet迭代</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Object&gt;  map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		map.put(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;2&quot;</span>, <span class="string">&quot;b&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;d&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		Set keySet = map.keySet();</span><br><span class="line">		Iterator it = keySet.iterator();</span><br><span class="line">		<span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">			Object obj = it.next();</span><br><span class="line">			Object value = map.get(obj);</span><br><span class="line">			</span><br><span class="line">			System.out.println(obj+<span class="string">&quot; : &quot;</span>+value);</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">输出：</span><br><span class="line"><span class="number">1</span> : a</span><br><span class="line"><span class="number">2</span> : b</span><br><span class="line"><span class="number">3</span> : d</span><br><span class="line">	</span><br></pre></td></tr></table></figure></li>
+<li><p>通过entrySet迭代</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String, Object&gt;  map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		map.put(<span class="string">&quot;1&quot;</span>,   <span class="string">&quot;a&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;2&quot;</span>, <span class="string">&quot;b&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line">		map.put(<span class="string">&quot;3&quot;</span>, <span class="string">&quot;d&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//获得所有键放入set集合中</span></span><br><span class="line">		Set&lt;Entry&lt;String,Object&gt;&gt; entrySet = map.entrySet();</span><br><span class="line">		<span class="comment">//通过迭代器取出map中的键值关系，迭代器接收的泛型参数和Set接收的一致  </span></span><br><span class="line">		Iterator&lt;Entry&lt;String, Object&gt;&gt; iterator = entrySet.iterator();</span><br><span class="line">		<span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">			<span class="comment">//将键值取出放入map.entry接口中</span></span><br><span class="line">			Map.Entry&lt;String, Object&gt; mapEntry = iterator.next();</span><br><span class="line">			String key = mapEntry.getKey();</span><br><span class="line">			Object value = mapEntry.getValue();</span><br><span class="line">			</span><br><span class="line">			System.out.println(key+<span class="string">&quot;:&quot;</span>+value);</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">输出：</span><br><span class="line"><span class="number">1</span>:a</span><br><span class="line"><span class="number">2</span>:b</span><br><span class="line"><span class="number">3</span>:d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4></li>
+<li><p>存储原理类似TreeSet,</p>
+</li>
+<li><p>按照某种顺序排列</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/09/java/java_map%E9%81%8D%E5%8E%86/" data-id="ckn31pgrr0060yas614v09mgl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_thread" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/07/java/java_thread/" class="article-date">
+  <time datetime="2017-12-07T14:15:07.000Z" itemprop="datePublished">2017-12-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/java/java_thread/">thread</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="thread"><a href="#thread" class="headerlink" title="thread"></a>thread</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">threads</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">99</span>;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(count&gt;<span class="number">0</span>) &#123;</span><br><span class="line">				Thread th = Thread.currentThread(); <span class="comment">//取得当前线程</span></span><br><span class="line">				String th_name = th.getName();  <span class="comment">// 获得线程的名称</span></span><br><span class="line">				System.out.println(th_name+<span class="string">&quot; &quot;</span>+count--);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		threads th = <span class="keyword">new</span> threads();</span><br><span class="line">		<span class="keyword">new</span> Thread(th,<span class="string">&quot;第一人&quot;</span>).start(); <span class="comment">//开启线程 命名为</span></span><br><span class="line">		<span class="keyword">new</span> Thread(th,<span class="string">&quot;第二人&quot;</span>).start(); <span class="comment">//开启线程 命名为</span></span><br><span class="line">		<span class="keyword">new</span> Thread(th,<span class="string">&quot;第三人&quot;</span>).start(); <span class="comment">//开启线程 命名为		</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>线程状态</li>
+<li>新建、就绪、阻塞、运行、死亡</li>
+<li>阻塞状态：调用join()方法或者sleep()方法,join()中断sleep()完成就会回到就绪状态、</li>
+<li>调用wait()方法、线程处于等待状态,notify()或者notifyAll()方法唤醒,进入就绪状态、</li>
+<li>yield()方法：线程让步、不会使线程进入阻塞状态、转换到就绪状态,让调度器重新调度一次、</li>
+<li>Thread 相关方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当前线程可转让cpu控制权，让别的就绪状态线程运行（切换）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Thread.yield() </span><br><span class="line"><span class="comment">//暂停一段时间</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Thread.sleep()  </span><br><span class="line"><span class="comment">//在一个线程中调用other.join(),将等待other执行完后才继续本线程。　　　　</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">join</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/07/java/java_thread/" data-id="ckn31pgrs0064yas6edecbjpu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-algorithm_日期(一年第几天)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/06/algorithm_%E6%97%A5%E6%9C%9F(%E4%B8%80%E5%B9%B4%E7%AC%AC%E5%87%A0%E5%A4%A9)/" class="article-date">
+  <time datetime="2017-12-06T14:43:43.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/06/algorithm_%E6%97%A5%E6%9C%9F(%E4%B8%80%E5%B9%B4%E7%AC%AC%E5%87%A0%E5%A4%A9)/">日期计算（一年中第几天）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="日期计算为一年中第几天"><a href="#日期计算为一年中第几天" class="headerlink" title="日期计算为一年中第几天"></a>日期计算为一年中第几天</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dayCount</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		String str = <span class="string">&quot;20171231&quot;</span>;</span><br><span class="line">		<span class="keyword">int</span> year = Integer.parseInt(str.substring(<span class="number">0</span>, <span class="number">4</span>));</span><br><span class="line">		<span class="keyword">int</span> month = Integer.parseInt(str.substring(<span class="number">4</span>, <span class="number">6</span>));</span><br><span class="line">		<span class="keyword">int</span> day = Integer.parseInt(str.substring(<span class="number">6</span>, <span class="number">8</span>));</span><br><span class="line">		total(year,month,day);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">total</span><span class="params">(<span class="keyword">int</span> year,<span class="keyword">int</span> month,<span class="keyword">int</span> day)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 判断是否为闰年</span></span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; month; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">1</span> || i == <span class="number">3</span> || i == <span class="number">5</span> || i == <span class="number">7</span> || i == <span class="number">8</span> || i == <span class="number">10</span> || i == <span class="number">12</span>) &#123;</span><br><span class="line">					count += <span class="number">31</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">					count += <span class="number">29</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">4</span> || i == <span class="number">6</span> || i == <span class="number">9</span> || i == <span class="number">11</span>) &#123;</span><br><span class="line">					count += <span class="number">30</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			count += day;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; month; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">1</span> || i == <span class="number">3</span> || i == <span class="number">5</span> || i == <span class="number">7</span> || i == <span class="number">8</span> || i == <span class="number">10</span> || i == <span class="number">12</span>) &#123;</span><br><span class="line">					count += <span class="number">31</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">					count += <span class="number">28</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">4</span> || i == <span class="number">6</span> || i == <span class="number">9</span> || i == <span class="number">11</span>) &#123;</span><br><span class="line">					count += <span class="number">30</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			count += day;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/06/algorithm_%E6%97%A5%E6%9C%9F(%E4%B8%80%E5%B9%B4%E7%AC%AC%E5%87%A0%E5%A4%A9)/" data-id="ckn31pgpv001byas69y8hht3y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-algorithm_字符串个字符个数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/06/algorithm_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0/" class="article-date">
+  <time datetime="2017-12-06T13:35:00.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/06/algorithm_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0/">字符串各字符的个数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="统计字符串各字符的个数"><a href="#统计字符串各字符的个数" class="headerlink" title="统计字符串各字符的个数"></a>统计字符串各字符的个数</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   String str = <span class="string">&quot; sdfadsfadfasf&quot;</span>;</span><br><span class="line"><span class="keyword">char</span>[] arr = str.toCharArray();</span><br><span class="line">Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(!map.containsKey(arr[i])) &#123;</span><br><span class="line">		map.put(arr[i], <span class="number">1</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">int</span> count = map.get(arr[i])+<span class="number">1</span>;</span><br><span class="line">		map.put(arr[i], count);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(map);</span><br></pre></td></tr></table></figure>
+<h4 id="js-函数json"><a href="#js-函数json" class="headerlink" title="js 函数json"></a>js 函数json</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> arr = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;b&quot;</span>];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">var</span> json = &#123;&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ;i&lt;arr.length;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(json[arr[i]])&#123;</span><br><span class="line">			json[arr[i]] +=<span class="number">1</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			json[arr[i]] =<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(json);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/06/algorithm_%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0/" data-id="ckn31pgpu0016yas65d3p2kjx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java/java_单例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/06/java/java_%E5%8D%95%E4%BE%8B/" class="article-date">
+  <time datetime="2017-12-06T12:46:39.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/06/java/java_%E5%8D%95%E4%BE%8B/">单例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="：单例"><a href="#：单例" class="headerlink" title="：单例"></a>：单例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 懒汉式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 饿汉式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 双检锁/双重校验锁（DCL，double-checked locking）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">static</span> Singleton singleton;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">        <span class="keyword">synchronized</span> (Singleton.class) &#123;  </span><br><span class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;  </span><br><span class="line">            singleton = <span class="keyword">new</span> Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/06/java/java_%E5%8D%95%E4%BE%8B/" data-id="ckn31pgrt0066yas603j0gw9g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-诗" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/12/04/%E8%AF%97/" class="article-date">
+  <time datetime="2017-12-04T07:19:39.000Z" itemprop="datePublished">2017-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/04/%E8%AF%97/">诗</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>朝辞白帝彩云间<br>千里江陵一日还<br>两岸猿声啼不住<br>轻舟已过万重山</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/12/04/%E8%AF%97/" data-id="ckn31pgr4004lyas63t6dg77g" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/14/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

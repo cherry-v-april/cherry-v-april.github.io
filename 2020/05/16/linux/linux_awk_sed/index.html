@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>linux-awk\sed 示例 | cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="linux-awk\sed 示例 统计ip出现的次数123456789awk &amp;#x27;&amp;#123;print $1&amp;#125;&amp;#x27; nginx.log | sort | uniq -c | sort -nr | head -n 10awk &amp;#x27;&amp;#123;print $1&amp;#125;&amp;#x27; nginx.log | sort | uniq -c | sort -nr | h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-awk\sed 示例">
+<meta property="og:url" content="http://example.com/2020/05/16/linux/linux_awk_sed/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:description" content="linux-awk\sed 示例 统计ip出现的次数123456789awk &amp;#x27;&amp;#123;print $1&amp;#125;&amp;#x27; nginx.log | sort | uniq -c | sort -nr | head -n 10awk &amp;#x27;&amp;#123;print $1&amp;#125;&amp;#x27; nginx.log | sort | uniq -c | sort -nr | h">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-16T07:02:19.000Z">
+<meta property="article:modified_time" content="2021-04-04T10:51:55.022Z">
+<meta property="article:author" content="v">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux/linux_awk_sed" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/16/linux/linux_awk_sed/" class="article-date">
+  <time datetime="2020-05-16T07:02:19.000Z" itemprop="datePublished">2020-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux-awk\sed 示例
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="linux-awk-sed-示例"><a href="#linux-awk-sed-示例" class="headerlink" title="linux-awk\sed 示例"></a>linux-awk\sed 示例</h5><ul>
+<li>统计ip出现的次数<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;&#123;print $1&#125;&#x27; nginx.log | sort | uniq -c | sort -nr | head -n 10</span><br><span class="line"></span><br><span class="line">awk &#x27;&#123;print $1&#125;&#x27; nginx.log | sort | uniq -c | sort -nr | head -10</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line">sort 排序 </span><br><span class="line">uniq -c 合并相邻相同的并统计</span><br><span class="line">sort 排序 -n 按照数值排序  -r反序</span><br><span class="line">head 取值多少</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 匹配 错误日志：</span></span><br><span class="line">awk &#x27;$9~/500|404/&#123;print $0&#125;&#x27; nginx.log</span><br></pre></td></tr></table></figure>
+<ul>
+<li>访问量最高的url<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">awk &#x27;&#123;print $7&#125;&#x27; nginx.log|</span><br><span class="line">sed -e &#x27;s/\?.*//g&#x27; \</span><br><span class="line">	-e &#x27;s/\/avatar\/[0-9]*/\/avatar\/int/g&#x27; \</span><br><span class="line">	-e &#x27;s/\topcs\/[0-9]*/\/topics\/int/g&#x27; \</span><br><span class="line">	-e &#x27;s/\/replies\/[0-9]*/\/replies\/int/g&#x27; \</span><br><span class="line">	-e &#x27;s/\/[0-9a-z\-]*\.png/\id.png/g&#x27; \</span><br><span class="line">	-e &#x27;s/\/[0-9a-z\-]*\.jpg/\/id.jpg/g&#x27; \</span><br><span class="line">	-e &#x27;s/\/[0-9a-z\-]*\.jepg/\/id.jepg/g&#x27; \</span><br><span class="line">	-e &#x27;s/\/[0-9a-z\-]*\.gif/\/id.gif/g&#x27; |</span><br><span class="line">sort | uniq -c | sort -nr</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li>nginx.log<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">223.104.7.59 - - [05&#x2F;Dec&#x2F;2018:00:00:01 +0000] &quot;GET &#x2F;topics&#x2F;17112 HTTP&#x2F;2.0&quot; 200 9874 &quot;https:&#x2F;&#x2F;www.googleapis.com&#x2F;auth&#x2F;chrome-content-suggestions&quot; &quot;Mozilla&#x2F;5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit&#x2F;605.1.15 (KHTML, like Gecko) CriOS&#x2F;70.0.3538.75 Mobile&#x2F;15E148 Safari&#x2F;605.1&quot; 0.040 0.040 .</span><br><span class="line">123.125.71.60 - - [05&#x2F;Dec&#x2F;2018:00:00:02 +0000] &quot;GET &#x2F;yuanyibo&#x2F;topics?locale&#x3D;en HTTP&#x2F;1.1&quot; 200 12164 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; Baiduspider&#x2F;2.0; +http:&#x2F;&#x2F;www.baidu.com&#x2F;search&#x2F;spider.html)&quot; 0.032 0.032 .</span><br><span class="line">141.8.142.131 - - [05&#x2F;Dec&#x2F;2018:00:00:02 +0000] &quot;GET &#x2F;topics?page&#x3D;63 HTTP&#x2F;1.1&quot; 200 16739 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; YandexBot&#x2F;3.0; +http:&#x2F;&#x2F;yandex.com&#x2F;bots)&quot; 0.120 0.120 .</span><br><span class="line">139.180.131.123 - - [05&#x2F;Dec&#x2F;2018:00:00:01 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 15073 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 592.015 592.015 .</span><br><span class="line">40.77.167.60 - - [05&#x2F;Dec&#x2F;2018:00:00:03 +0000] &quot;GET &#x2F;hehe123 HTTP&#x2F;1.1&quot; 200 3494 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit&#x2F;537.51.1 (KHTML, like Gecko) Version&#x2F;7.0 Mobile&#x2F;11A465 Safari&#x2F;9537.53 (compatible; bingbot&#x2F;2.0; +http:&#x2F;&#x2F;www.bing.com&#x2F;bingbot.htm)&quot; 0.033 0.033 .</span><br><span class="line">204.141.42.226 - - [05&#x2F;Dec&#x2F;2018:00:00:04 +0000] &quot;GET &#x2F; HTTP&#x2F;1.1&quot; 301 5 &quot;-&quot; &quot;Site24x7&quot; 0.002 0.002 .</span><br><span class="line">40.77.167.60 - - [05&#x2F;Dec&#x2F;2018:00:00:04 +0000] &quot;GET &#x2F;uploads&#x2F;user&#x2F;avatar&#x2F;11094.jpg!xs HTTP&#x2F;1.1&quot; 200 1499 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; bingbot&#x2F;2.0; +http:&#x2F;&#x2F;www.bing.com&#x2F;bingbot.htm)&quot; 0.011 0.011 .</span><br><span class="line">127.0.0.1 - - [05&#x2F;Dec&#x2F;2018:00:00:04 +0000] &quot;GET &#x2F;_img&#x2F;uploads&#x2F;user&#x2F;avatar&#x2F;11094.jpg!xs HTTP&#x2F;1.0&quot; 200 1499 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; bingbot&#x2F;2.0; +http:&#x2F;&#x2F;www.bing.com&#x2F;bingbot.htm)&quot; 0.011 - .</span><br><span class="line">139.180.131.123 - - [05&#x2F;Dec&#x2F;2018:00:00:01 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 7549 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 587.602 587.602 .</span><br><span class="line">117.136.39.87 - - [05&#x2F;Dec&#x2F;2018:00:00:01 +0000] &quot;GET &#x2F;uploads&#x2F;user&#x2F;avatar&#x2F;12759.jpg!large HTTP&#x2F;1.1&quot; 200 1866441 &quot;-&quot; &quot;okhttp&#x2F;3.2.0&quot; 3.910 1.336 .</span><br><span class="line">121.15.166.147 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 335037 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.102 Safari&#x2F;537.36&quot; 26471.138 26471.138 .</span><br><span class="line">219.142.131.122 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 361523 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.103 Safari&#x2F;537.36 Vivaldi&#x2F;2.1.1337.47&quot; 28563.286 28563.286 .</span><br><span class="line">61.132.54.2 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 380979 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;62.0.3202.89 Safari&#x2F;537.36&quot; 30102.676 30102.676 .</span><br><span class="line">103.75.152.102 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 424907 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 33572.810 33572.810 .</span><br><span class="line">222.66.96.129 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 424907 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;58.0.3029.110 Safari&#x2F;537.36&quot; 33573.471 33573.471 .</span><br><span class="line">180.168.166.28 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 424907 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;68.0.3440.106 Safari&#x2F;537.36&quot; 33573.628 33573.628 .</span><br><span class="line">114.94.126.62 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 510141 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;67.0.3396.62 Safari&#x2F;537.36&quot; 40313.333 40313.333 .</span><br><span class="line">61.135.169.90 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 531953 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.77 Safari&#x2F;537.36&quot; 42038.134 42038.134 .</span><br><span class="line">120.36.255.107 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 580604 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 45876.266 45876.266 .</span><br><span class="line">14.21.33.152 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 580631 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 45884.878 45884.878 .</span><br><span class="line">103.218.216.115 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 593019 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 46865.329 46865.329 .</span><br><span class="line">124.200.99.162 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 593019 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;67.0.3396.99 Safari&#x2F;537.36&quot; 46865.485 46865.485 .</span><br><span class="line">101.95.128.162 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 593106 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.102 Safari&#x2F;537.36&quot; 46865.503 46865.503 .</span><br><span class="line">45.120.31.9 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 636757 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (X11; Ubuntu; Linux x86_64; rv:63.0) Gecko&#x2F;20100101 Firefox&#x2F;63.0&quot; 50322.346 50322.346 .</span><br><span class="line">125.46.24.19 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 941 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64; rv:63.0) Gecko&#x2F;20100101 Firefox&#x2F;63.0&quot; 65.038 65.038 .</span><br><span class="line">220.178.67.222 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 14089 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;65.0.3325.181 Safari&#x2F;537.36 QQBrowser&#x2F;4.4.116.400&quot; 1104.968 1104.968 .</span><br><span class="line">122.225.218.44 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 18725 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;69.0.3497.81 Safari&#x2F;537.36&quot; 1471.999 1471.999 .</span><br><span class="line">206.16.17.150 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 64135 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 5061.106 5061.106 .</span><br><span class="line">202.189.3.9 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 80703 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64; rv:63.0) Gecko&#x2F;20100101 Firefox&#x2F;63.0&quot; 6370.541 6370.541 .</span><br><span class="line">14.17.22.35 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 91115 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;68.0.3440.84 Safari&#x2F;537.36&quot; 7190.962 7190.962 .</span><br><span class="line">114.80.11.236 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 169319 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;69.0.3497.100 Safari&#x2F;537.36&quot; 13372.959 13372.959 .</span><br><span class="line">221.226.97.96 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 182087 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.77 Safari&#x2F;537.36&quot; 14383.058 14383.058 .</span><br><span class="line">115.236.48.202 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 215196 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;63.0.3239.26 Safari&#x2F;537.36 Core&#x2F;1.63.6776.400 QQBrowser&#x2F;10.3.2601.400&quot; 16992.246 16992.246 .</span><br><span class="line">153.37.218.54 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 261583 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;69.0.3497.100 Safari&#x2F;537.36&quot; 20663.731 20663.731 .</span><br><span class="line">171.43.191.215 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 273021 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 21568.749 21568.749 .</span><br><span class="line">136.243.151.90 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;topics&#x2F;16689&#x2F;replies&#x2F;124751&#x2F;edit HTTP&#x2F;1.1&quot; 302 100 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; BLEXBot&#x2F;1.0; +http:&#x2F;&#x2F;webmeup-crawler.com&#x2F;)&quot; 0.009 0.009 .</span><br><span class="line">136.243.151.90 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F; HTTP&#x2F;1.1&quot; 200 10085 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (compatible; BLEXBot&#x2F;1.0; +http:&#x2F;&#x2F;webmeup-crawler.com&#x2F;)&quot; 0.071 0.071 .</span><br><span class="line">117.136.39.87 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;oauth&#x2F;authorize?response_type&#x3D;code&amp;client_id&#x3D;6dbe4244&amp;state&#x3D;E3ZYKC1T6H2yP4z&amp;redirect_uri&#x3D;urn:ietf:wg:oauth:2.0:oob HTTP&#x2F;1.1&quot; 302 115 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Linux; Android 8.1.0; COL-AL10 Build&#x2F;HUAWEICOL-AL10; wv) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Version&#x2F;4.0 Chrome&#x2F;68.0.3440.91 Mobile Safari&#x2F;537.36&quot; 0.004 0.004 .</span><br><span class="line">115.236.50.18 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 404 45 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;70.0.3538.110 Safari&#x2F;537.36&quot; 0.004 0.004 .</span><br><span class="line">123.121.16.2 - - [05&#x2F;Dec&#x2F;2018:00:00:07 +0000] &quot;GET &#x2F;cable HTTP&#x2F;1.1&quot; 101 5349 &quot;-&quot; &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko&#x2F;20100101 Firefox&#x2F;56.0&quot; 415.053 415.053 .</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/05/16/linux/linux_awk_sed/" data-id="ckn31pgs0006kyas6dre02gfl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/17/linux/linux_shell/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          linux—shell
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/11/linux/linux_bash/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linux—bash</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

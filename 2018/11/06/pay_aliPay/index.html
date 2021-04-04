@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>aliPay | cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="支付宝支付 生成订单  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849@Overridepublic void addAliOrder(Integer orderId, Integer userId) throws Exception &amp;#123;    ShopOr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="aliPay">
+<meta property="og:url" content="http://example.com/2018/11/06/pay_aliPay/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:description" content="支付宝支付 生成订单  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849@Overridepublic void addAliOrder(Integer orderId, Integer userId) throws Exception &amp;#123;    ShopOr">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-11-06T02:20:26.000Z">
+<meta property="article:modified_time" content="2021-04-04T10:51:54.983Z">
+<meta property="article:author" content="v">
+<meta property="article:tag" content="ali&#x2F;weixin pay">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-pay_aliPay" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/06/pay_aliPay/" class="article-date">
+  <time datetime="2018-11-06T02:20:26.000Z" itemprop="datePublished">2018-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      aliPay
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="支付宝支付"><a href="#支付宝支付" class="headerlink" title="支付宝支付"></a>支付宝支付</h5><ul>
+<li>生成订单</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addAliOrder</span><span class="params">(Integer orderId, Integer userId)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    ShopOrder shopOrder = <span class="keyword">this</span>.findOrderById(orderId);</span><br><span class="line">    <span class="keyword">if</span> (shopOrder.getUserId() != userId.intValue()) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;非此用户订单&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    ShopGoods shopGoods = shopGoodsDao.findOne(shopOrder.getGoodsId());</span><br><span class="line">    Float totalAmount = (<span class="keyword">float</span>) shopOrder.getTotalAmount() / <span class="number">100</span>;</span><br><span class="line">    String totalAmountStr = totalAmount.toString();</span><br><span class="line">    <span class="keyword">this</span>.initAliWapPay(orderId, shopGoods.getGoodsName(), totalAmountStr, <span class="string">&quot;xxx商城订单【&quot;</span> + shopGoods.getGoodsName() + <span class="string">&quot;】&quot;</span>, httpResponse);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initAliWapPay</span><span class="params">(Integer orderId, String subject, String totalAmount, String body, HttpServletResponse httpResponse)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    String orderPrefix = env.getProperty(<span class="string">&quot;shopOrder.prefix&quot;</span>);</span><br><span class="line">    String out_trade_no = orderPrefix + <span class="string">&quot;_&quot;</span> + orderId;</span><br><span class="line">    String timeout_express = <span class="string">&quot;2m&quot;</span>;</span><br><span class="line">    String product_code = <span class="string">&quot;QUICK_WAP_WAY&quot;</span>;</span><br><span class="line">    AlipayClient client = userTokenService.getAlipayClient();</span><br><span class="line">    AlipayTradeWapPayRequest alipay_request = <span class="keyword">new</span> AlipayTradeWapPayRequest();</span><br><span class="line">    AlipayTradeWapPayModel model = <span class="keyword">new</span> AlipayTradeWapPayModel();</span><br><span class="line">    model.setOutTradeNo(out_trade_no);</span><br><span class="line">    model.setSubject(subject);</span><br><span class="line">    model.setTotalAmount(totalAmount);</span><br><span class="line">    model.setBody(body);</span><br><span class="line">    model.setTimeoutExpress(timeout_express);</span><br><span class="line">    model.setProductCode(product_code);</span><br><span class="line">    alipay_request.setBizModel(model);</span><br><span class="line">    <span class="comment">// 设置异步通知地址</span></span><br><span class="line">    String notifyUrl = env.getProperty(<span class="string">&quot;shopAliPay.notify&quot;</span>);</span><br><span class="line">    alipay_request.setNotifyUrl(notifyUrl);</span><br><span class="line">    <span class="comment">// 设置同步地址</span></span><br><span class="line">    String returnUrl = env.getProperty(<span class="string">&quot;shopAliPay.return&quot;</span>);</span><br><span class="line">    alipay_request.setReturnUrl(returnUrl);</span><br><span class="line">    String form = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        form = client.pageExecute(alipay_request).getBody();</span><br><span class="line">        httpResponse.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        httpResponse.getWriter().write(form);</span><br><span class="line">        httpResponse.getWriter().flush();</span><br><span class="line">        httpResponse.getWriter().close();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (AlipayApiException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>getClient</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AlipayClient <span class="title">getAlipayClient</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(alipayClient == <span class="keyword">null</span>)&#123;</span><br><span class="line">        String app_id = <span class="string">&quot;xxxxxxxxxx&quot;</span>;</span><br><span class="line">        String privateKey = env.getProperty(<span class="string">&quot;private_key&quot;</span>);</span><br><span class="line">        String publicKey = env.getProperty(<span class="string">&quot;alipay_public_key&quot;</span>);</span><br><span class="line">        alipayClient = <span class="keyword">new</span> DefaultAlipayClient(<span class="string">&quot;https://openapi.alipay.com/gateway.do&quot;</span>,app_id, privateKey,<span class="string">&quot;json&quot;</span>,<span class="string">&quot;utf-8&quot;</span>,publicKey,<span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> alipayClient;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>回调</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 宝支付回调地址</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(value = &quot;/aliPayNotify&quot;, method = RequestMethod.POST)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@ApiOperation(value = &quot;支付宝支付回调地址&quot;, notes = &quot;支付宝支付回调地址&quot;)</span></span><br><span class="line"><span class="meta">@ApiResponses(&#123;</span></span><br><span class="line"><span class="meta">        @ApiResponse(code = 1, message = &quot;成功&quot;, response = GetUserResponse.class),</span></span><br><span class="line"><span class="meta">        @ApiResponse(code = 201, message = &quot;没有找到这个用户&quot;, response = ExceptionResponse.class)</span></span><br><span class="line"><span class="meta">&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shopAliNotify</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    String alipayPublicKey = env.getProperty(<span class="string">&quot;alipay_public_key&quot;</span>);</span><br><span class="line">    <span class="keyword">boolean</span> verifyStatus = AlipayNotify.rsaAliPayCheckV1(alipayPublicKey, request);</span><br><span class="line">    <span class="keyword">if</span> (verifyStatus) &#123;</span><br><span class="line">        String orderPrefix = env.getProperty(<span class="string">&quot;shopOrder.prefix&quot;</span>);</span><br><span class="line">        AlipayNotify alipayNotify = <span class="keyword">new</span> AlipayNotify(request, orderPrefix);</span><br><span class="line">        <span class="keyword">if</span> (alipayNotify.getTradeSuccess()) &#123;</span><br><span class="line">            String callBackMsg = alipayNotify.getCallbackMsg();</span><br><span class="line">            Integer orderId = alipayNotify.getOrderId().intValue();</span><br><span class="line">            <span class="comment">//...</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>AlipayNotify</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlipayNotify</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Map&lt;String, String&gt; m;</span><br><span class="line">    String callbackMsg;</span><br><span class="line">    String orderIdstr;</span><br><span class="line">    Long orderId;</span><br><span class="line">    String trade_no;</span><br><span class="line">    String sign;</span><br><span class="line">    String tradeStatus;</span><br><span class="line">    String outTradeNo;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AlipayNotify</span><span class="params">(HttpServletRequest request, String orderPrefix)</span> </span>&#123;</span><br><span class="line">        Map&lt;String, String[]&gt; params = request.getParameterMap();</span><br><span class="line">        sign = request.getParameter(<span class="string">&quot;sign&quot;</span>);</span><br><span class="line">        m = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;body&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;body&quot;</span>, params.get(<span class="string">&quot;body&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;buyer_id&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;buyer_id&quot;</span>, params.get(<span class="string">&quot;buyer_id&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;gmt_create&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;gmt_create&quot;</span>, request.getParameter(<span class="string">&quot;gmt_create&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;gmt_payment&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;gmt_payment&quot;</span>, request.getParameter(<span class="string">&quot;gmt_payment&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;notify_id&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;notify_id&quot;</span>, params.get(<span class="string">&quot;notify_id&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;notify_time&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;notify_time&quot;</span>, params.get(<span class="string">&quot;notify_time&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;notify_type&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;notify_type&quot;</span>, params.get(<span class="string">&quot;notify_type&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;out_trade_no&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;out_trade_no&quot;</span>, params.get(<span class="string">&quot;out_trade_no&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;seller_email&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;seller_email&quot;</span>, params.get(<span class="string">&quot;seller_email&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;seller_id&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;seller_id&quot;</span>, params.get(<span class="string">&quot;seller_id&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;subject&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;subject&quot;</span>, params.get(<span class="string">&quot;subject&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;trade_status&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;trade_status&quot;</span>, params.get(<span class="string">&quot;trade_status&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;out_trade_no&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;out_trade_no&quot;</span>, params.get(<span class="string">&quot;out_trade_no&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;trade_no&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;trade_no&quot;</span>, params.get(<span class="string">&quot;trade_no&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;sign&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            m.put(<span class="string">&quot;sign&quot;</span>, params.get(<span class="string">&quot;sign&quot;</span>)[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//属性参数</span></span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;trade_no&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.trade_no = params.get(<span class="string">&quot;trade_no&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;out_trade_no&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.outTradeNo = params.get(<span class="string">&quot;out_trade_no&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (params.get(<span class="string">&quot;trade_status&quot;</span>) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.tradeStatus = params.get(<span class="string">&quot;trade_status&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.callbackMsg = Map2StringUtil.mapToString(m);</span><br><span class="line">        orderIdstr = params.get(<span class="string">&quot;out_trade_no&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.orderIdstr.contains(<span class="string">&quot;_&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="keyword">this</span>.orderIdstr.split(<span class="string">&quot;_&quot;</span>)[<span class="number">0</span>].equals(orderPrefix)) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">&quot;not find prefix&quot;</span> + orderPrefix);</span><br><span class="line">            &#125;</span><br><span class="line">            orderId = Long.parseLong(<span class="keyword">this</span>.orderIdstr.split(<span class="string">&quot;_&quot;</span>)[<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTradeStatus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> tradeStatus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取订单是否支付成功的状态</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">getTradeSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.tradeStatus.equals(<span class="string">&quot;TRADE_SUCCESS&quot;</span>) || <span class="keyword">this</span>.tradeStatus.equals(<span class="string">&quot;TRADE_FINISHED&quot;</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Map&lt;String, String&gt; <span class="title">getRequestMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> m;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getCallbackMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> callbackMsg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getOrderIdstr</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> orderIdstr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Long <span class="title">getOrderId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> orderId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTrade_no</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> trade_no;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getSign</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sign;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">rsaAliPayCheckV1</span><span class="params">(String alipayPublicKey, HttpServletRequest request)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 获取支付宝POST过来反馈信息</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        Map&lt;String, String&gt; params = VersionUtil.getParams(request);</span><br><span class="line">        String charset = <span class="string">&quot;utf-8&quot;</span>;</span><br><span class="line">        <span class="keyword">boolean</span> verify_result = AlipaySignature.rsaCheckV1(params, alipayPublicKey, charset, <span class="string">&quot;RSA&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!verify_result) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/11/06/pay_aliPay/" data-id="ckn31pgqb002hyas66012ez3t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/07/pay_%E5%8D%B3%E6%97%B6%E5%88%B0%E8%B4%A6%E4%BA%A4%E6%98%93%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          即时到账 ali
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/06/pay_wxPay/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">wxPay</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

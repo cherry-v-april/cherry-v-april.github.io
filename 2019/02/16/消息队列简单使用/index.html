@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MnsUtil | cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="消息队列简单使用123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MnsUtil">
+<meta property="og:url" content="http://example.com/2019/02/16/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:description" content="消息队列简单使用123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-02-16T11:20:26.000Z">
+<meta property="article:modified_time" content="2021-04-04T10:51:55.014Z">
+<meta property="article:author" content="v">
+<meta property="article:tag" content="消息队列">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-消息队列简单使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/16/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2019-02-16T11:20:26.000Z" itemprop="datePublished">2019-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MnsUtil
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="消息队列简单使用"><a href="#消息队列简单使用" class="headerlink" title="消息队列简单使用"></a>消息队列简单使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line">package com.ifenghui.queue;</span><br><span class="line"></span><br><span class="line">import com.aliyun.mns.client.CloudAccount;</span><br><span class="line">import com.aliyun.mns.client.CloudQueue;</span><br><span class="line">import com.aliyun.mns.client.MNSClient;</span><br><span class="line">import com.aliyun.mns.model.Message;</span><br><span class="line">import com.aliyun.mns.model.QueueMeta;</span><br><span class="line">import com.fasterxml.jackson.core.JsonProcessingException;</span><br><span class="line">import com.fasterxml.jackson.databind.ObjectMapper;</span><br><span class="line">import com.ifenghui.app.comment.exception.FhException;</span><br><span class="line">import org.apache.log4j.Logger;</span><br><span class="line">import org.springframework.beans.factory.annotation.Value;</span><br><span class="line">import org.springframework.integration.support.json.Jackson2JsonObjectMapper;</span><br><span class="line">import org.springframework.stereotype.Component;</span><br><span class="line">import java.lang.reflect.Method;</span><br><span class="line">import java.util.Date;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">public class MnsUtil&#123;</span><br><span class="line"></span><br><span class="line">    Logger logger&#x3D; Logger.getLogger(MnsUtil.class);</span><br><span class="line">    public MNSClient getClient() &#123;</span><br><span class="line">        return client;</span><br><span class="line">    &#125;</span><br><span class="line">    private static MNSClient client &#x3D; null;</span><br><span class="line">    @Value(&quot;$&#123;mns.accountendpoint&#125;&quot;)</span><br><span class="line">    String endPoint;&#x2F;&#x2F;&#x3D;&quot;http:&#x2F;&#x2F;20900454.mns.cn-hangzhou.aliyuncs.com&quot;;</span><br><span class="line">    @Value(&quot;$&#123;mns.accesskeyid&#125;&quot;)</span><br><span class="line">    String accessKeyId;&#x2F;&#x2F;&#x3D;&quot;xxxxxxxxx&quot;;</span><br><span class="line">    @Value(&quot;$&#123;mns.accesskeysecret&#125;&quot;)</span><br><span class="line">    String accessKeySecret;&#x2F;&#x2F;&#x3D;&quot;xxxxxxxxxxxx&quot;;</span><br><span class="line">    @Value(&quot;$&#123;mns.prefix&#125;&quot;)</span><br><span class="line">    String mnsPrefix;</span><br><span class="line">    public MnsUtil() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public MnsUtil(String endPoint,String accessKeyId,String accessKeySecret,String mnsPrefix) &#123;</span><br><span class="line">        this.endPoint&#x3D;endPoint;</span><br><span class="line">        this.accessKeySecret&#x3D;accessKeySecret;</span><br><span class="line">        this.accessKeyId&#x3D;accessKeyId;</span><br><span class="line">        this.mnsPrefix&#x3D;mnsPrefix;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void init()&#123;</span><br><span class="line">        if(client!&#x3D;null)&#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        CloudAccount account &#x3D; new CloudAccount(</span><br><span class="line">                accessKeyId,</span><br><span class="line">                accessKeySecret,</span><br><span class="line">                endPoint);</span><br><span class="line">        client &#x3D; account.getMNSClient();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public CloudQueue createQueue(String queueName)&#123;</span><br><span class="line">            this.init();</span><br><span class="line">        CloudQueue queue1&#x3D;null;</span><br><span class="line">        try&#123;</span><br><span class="line">            QueueMeta meta1 &#x3D; new QueueMeta();</span><br><span class="line">            meta1.setQueueName(this.mnsPrefix+queueName);</span><br><span class="line">            meta1.setPollingWaitSeconds(30);</span><br><span class="line">            meta1.setMaxMessageSize(2048L);</span><br><span class="line">            queue1 &#x3D; client.createQueue(meta1);</span><br><span class="line">            return queue1;</span><br><span class="line"></span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">            return queue1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void deleteMessage(CloudQueue queue,String messageHandle)&#123;</span><br><span class="line">        this.init();</span><br><span class="line">        queue.deleteMessage(messageHandle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public &lt;M&gt; void popMessageThread(String queueName,Object listener,Class&lt;M&gt; messageType)&#123;</span><br><span class="line"></span><br><span class="line">        MnsUtil mnsUtil&#x3D;this;</span><br><span class="line">        try&#123;</span><br><span class="line">            this.createQueue(queueName);</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Runnable task&#x3D;new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                mnsUtil.popMessage(queueName,listener,messageType);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        Thread t&#x3D;new Thread(task);</span><br><span class="line">        t.start();</span><br><span class="line">    &#125;</span><br><span class="line">    public &lt;M&gt; Message popMessage(String queueName,Object listener,Class&lt;M&gt; messageType)&#123;</span><br><span class="line">        this.init();</span><br><span class="line">        CloudQueue queue&#x3D; client.getQueueRef(mnsPrefix+queueName);</span><br><span class="line"></span><br><span class="line">                while (true)&#123;</span><br><span class="line">                    try&#123;</span><br><span class="line">                        Message popMsg&#x3D;null;</span><br><span class="line">                        try&#123;</span><br><span class="line">                            popMsg &#x3D; queue.popMessage();</span><br><span class="line">                        &#125;catch (Exception e)&#123;</span><br><span class="line">                            logger.info(&quot;popMessage a message error&gt;&gt;&gt;&gt; currentTime&quot;+new Date());</span><br><span class="line">                            Thread.sleep(60000);</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                        if(popMsg&#x3D;&#x3D;null)&#123;</span><br><span class="line">                            continue;</span><br><span class="line">                        &#125;</span><br><span class="line">                        logger.info(&quot;read a message&gt;&gt;&gt;&gt;&quot;+popMsg.getMessageBody());</span><br><span class="line"></span><br><span class="line">                        Method method&#x3D;listener.getClass().getMethod(&quot;process&quot;, messageType);</span><br><span class="line">                        M message&#x3D;this.getMessageBody(popMsg.getMessageBody(),messageType);</span><br><span class="line">                        method.invoke(listener,message);</span><br><span class="line">                        String handle&#x3D;popMsg.getReceiptHandle();</span><br><span class="line">                        queue.deleteMessage(handle);</span><br><span class="line">                    &#125;catch (Exception e)&#123;</span><br><span class="line">                        logger.error(&quot;error message&gt;&gt;&gt;&gt;&quot;+e.getMessage()+&quot;:&quot;+queueName);</span><br><span class="line">                        e.printStackTrace();</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    System.out.println(&quot;read a message&quot;);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     public &lt;M&gt; M getMessageBody(String messageBody,Class&lt;M&gt; jsonType) throws Exception &#123;</span><br><span class="line">        Jackson2JsonObjectMapper jackson2JsonObjectMapper&#x3D;new Jackson2JsonObjectMapper();</span><br><span class="line">        M messageObj&#x3D;jackson2JsonObjectMapper.fromJson(messageBody,jsonType);</span><br><span class="line"></span><br><span class="line">        return messageObj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public Message pushMessage(MnsMessage object) throws JsonProcessingException &#123;</span><br><span class="line">        if(object.getQueueName()&#x3D;&#x3D;null)&#123;</span><br><span class="line">            logger.error(&quot;queue is null&quot;);</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        this.init();</span><br><span class="line">        ObjectMapper mapper &#x3D; new ObjectMapper();</span><br><span class="line">        CloudQueue queue&#x3D; client.getQueueRef(mnsPrefix+MnsMessageListener.mnsQueueName);</span><br><span class="line">        String messageBody&#x3D;  mapper.writeValueAsString(object);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Message message &#x3D; new Message();</span><br><span class="line">        message.setMessageBody(messageBody);</span><br><span class="line">        Message putMsg &#x3D; queue.putMessage(message);</span><br><span class="line">        return putMsg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        MnsUtil mnsUtil&#x3D;new MnsUtil();</span><br><span class="line">        System.out.println(&quot;over&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ImMessage imMessage=<span class="keyword">new</span> ImMessage();</span><br><span class="line"></span><br><span class="line">imMessage.setContent(p.getContent());</span><br><span class="line">imMessage.setFrom(<span class="string">&quot;29&quot;</span>);</span><br><span class="line">imMessage.setTo(userList);</span><br><span class="line">mnsUtil.pushMessage(imMessage);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/02/16/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" data-id="ckn31pgr0004dyas65lfi4d08" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/18/java/Java_%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java基础知识
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/15/mysql/sql_%20%E5%85%B3%E9%94%AE%E5%AD%97%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">关键字执行顺序</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

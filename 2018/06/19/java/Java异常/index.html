@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java异常 | cherry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java异常1.什么是异常 在Java程序运行时，常常会出现一些非正常的现象，这种情况称为运行错误。根据其性质可以分为错误和异常。Java程序中（无论是谁写的代码），所有抛出（throw）的异常都必须从Throwable派生而来。类Throwable有两个直接子类：Error和Exception。 一般来说，最常见的错误有程序进入死循环、内存泄漏等。这种情况下，程序运行时本身无法解决，只能通过其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java异常">
+<meta property="og:url" content="http://example.com/2018/06/19/java/Java%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:site_name" content="cherry">
+<meta property="og:description" content="Java异常1.什么是异常 在Java程序运行时，常常会出现一些非正常的现象，这种情况称为运行错误。根据其性质可以分为错误和异常。Java程序中（无论是谁写的代码），所有抛出（throw）的异常都必须从Throwable派生而来。类Throwable有两个直接子类：Error和Exception。 一般来说，最常见的错误有程序进入死循环、内存泄漏等。这种情况下，程序运行时本身无法解决，只能通过其他">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-06-19T01:18:26.000Z">
+<meta property="article:modified_time" content="2021-04-04T10:51:55.011Z">
+<meta property="article:author" content="v">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="cherry" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">cherry</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-java/Java异常" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/19/java/Java%E5%BC%82%E5%B8%B8/" class="article-date">
+  <time datetime="2018-06-19T01:18:26.000Z" itemprop="datePublished">2018-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java异常
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Java异常"><a href="#Java异常" class="headerlink" title="Java异常"></a>Java异常</h5><p>1.什么是异常</p>
+<p>在Java程序运行时，常常会出现一些非正常的现象，这种情况称为运行错误。根据其性质可以分为错误和异常。Java程序中（无论是谁写的代码），所有抛出（throw）的异常都必须从Throwable派生而来。类Throwable有两个直接子类：Error和Exception。</p>
+<p>一般来说，最常见的错误有程序进入死循环、内存泄漏等。这种情况下，程序运行时本身无法解决，只能通过其他程序干预。Java对应的类为Error类。Error类对象由Java虚拟机生成并抛弃（通常Java程序不对这类异常进行处理）。</p>
+<p>异常是程序执行时遇到的非正常情况或意外行为。以下这些情况一般都可以引发异常：代码或调用的代码（如共享库）中有错误，操作系统资源不可用，公共语言运行库遇到意外情况（如无法验证代码）等。常见的有数组下标越界、算法溢出（超出数值表达范围）、除数为零、无效参数、内存溢出等。这种情况不像错误类那样，程序运行时本身可以解决，由异常代码调整程序运行方向，使程序仍可继续运行，直至正常结束。</p>
+<p>Java异常对应的类为Exception类。Exception类对象是Java程序处理或抛弃的对象，它有各种不同的子类分别对应于不同类型的异常。Java编译器要求程序必须捕获或声明所有的非运行时异常，但对运行时异常可以不做处理。其中类RuntimeException代表运行时由Java虚拟机生成的异常，原因是编程错误。其他则为非运行时异常，原因是程序碰到了意外情况，如输入/输出异常IOException等。</p>
+<p>2.异常关键字</p>
+<p>Java异常处理的关键语句有五个：try、catch、throw、throws、finally。其中，try、catch、finally三个语句块应注意的问题如下。</p>
+<p>1）try、catch、finally三个语句块均不能单独使用，三者可以组成try…catch…finally、try…catch、try…finally三种结构，catch语句可以有一个或多个，finally语句最多一个。</p>
+<p>2）try、catch、finally三个代码块中变量的作用域为代码块内部，分别独立而不能相互访问。如果要在三个块中都可以访问，则需要将变量定义到这些块的外面。</p>
+<p>3）若有多个catch块，只会匹配其中一个异常类并执行catch块代码，而不会再执行别的catch块，并且匹配catch语句的顺序是由上到下的。</p>
+<p>throw、throws关键字的区别如下。</p>
+<p>throw关键字用于方法体内部，用来抛出一个Throwable类型的异常。如果抛出了检查异常，则还应该在头部声明方法可能抛出的异常类型。该方法的调用者也必须检查处理抛出的异常。如果所有的方法都层层上抛获取的异常，最终JVM会进行处理，处理也很简单，就是打印异常消息和堆栈信息。如果抛出的是Error或RuntimeException，则该方法的调用者可选择处理该异常。</p>
+<p>throws关键字用于方法体外部的方法声明部分，用来声明方法可能会抛出某些异常。仅当抛出了检查异常，该方法的调用者才必须处理或者重新抛出该异常。当方法的调用者无力处理该异常的时候，应该继续抛出，而不是囫囵吞枣般地在catch块中打印堆栈信息来做处理。</p>
+<p>3.Java异常和C++异常的区别</p>
+<p>在C++异常处理模型中，它给予程序员最大的自由度和发挥空间，允许程序员抛出任何想要的异常对象，它可以是语言系统中原本所提供的各种简单数据类型（如int 、float 、double等），也可以是用户自定义的抽象数据对象（如class的object实例）。但是C++语言规范中并无此约束，况且由于各个子系统（基础运行库）不是一个厂商（某一个人）统一设计的，所以导致每个子系统设计出的异常对象系统彼此相差甚远。这给最终使用（重用）这些库的程序员带来了很大的不一致性，甚至是很大的麻烦，需要花费很多时间来学习和熟悉这些不同的异常对象子系统。更大的问题是，这些不同子系统之间语义上的不一致，从而造成程序员在最终处理这些异常时，将很难把它们统一起来，例如，MFC库系统中，采用CMemoryException来表示一个与内存操作相关的异常；而其他的库系统中很可能就会采用另外一个class来表示内存操作的异常错误。本质上说，缺乏规范和统一所造成的恶劣后果。所以，设计Java语言的时候，就要充分考虑到这些问题，把它们纳入语言的统一规范中，这对广大的程序员来说，无疑是一件好事。</p>
+<p>实际的Java编程中，由于JDK平台已经为我们设计好了非常丰富和完整的异常对象分类模型。因此，Java程序员一般不需要重新定义自己的异常对象，而且即便是需要扩展自定义的异常对象，也往往会从Exception派生而来。所以，对于Java程序员而言，它一般只需要在它的顶级函数中用catch (Exception ex)就可以捕获出所有的异常对象，而不必像C++中采用catch (…) 那样的语法。</p>
+<p>4.异常处理中常见的问题</p>
+<p>（1）过于庞大的try块</p>
+<p>某些程序员把大量的代码放入单个try块，试图用一个catch语句捕获所有的异常和处理所有可能出现的异常，实际上这是一个坏习惯。原因就在于为了图省事，不愿花时间分析一大块代码中哪几行代码会抛出异常、异常的具体类型是什么。把大量的语句装入单个巨大的try块就像是出门旅游时把全部家当塞入集装箱带走，虽然东西是带上了，但要找出来可不容易。</p>
+<p>对于这种问题，可以设置多个异常抛出点来解决。异常对象从产生点产生后，到被捕捉后终止生命的全过程中，实际上是一个传值过程，所以，应根据实际来合理控制检测异常个数。catch语句表示会出现某种异常，而且希望能够处理该异常。所以在catch语句中就应该尽量指定具体异常类型，也可使用多个catch，用于分别处理不同的异常。例如，要捕获一个最明显的异常是SQLException，这是JDBC操作中常见的异常。另一个可能的异常是IOException，因为它要操作OutputStreamWriter。显然，在同一个catch块中处理这两种截然不同的异常是不合适的。如果用两个catch块分别捕获SQLException和IOException就要好多了。</p>
+<p>（2）异常的完整性</p>
+<p>在Java语言中，如果一个函数运行时可能会向上层调用者函数抛出一个异常，那么，它就必须在该函数的声明中显式地注明（采用throws关键字）。否则编译器会报出错误信息“must be caught or declared to be thrown”。其中“must be caught”指在Java的异常处理模型中，要求所有被抛出的异常都必须有对应的“异常处理模块”。如果你在程序中利用throw出现一个异常，那么在你的程序（函数）中就必须要用catch处理这个异常。例如下面的例子中，抛出了一个Exception类型的异常，所以在该函数中，就必须有一个catch，并处理此异常。如果没有这个catch，Java语言在编译时就直接拦住这种可能出现错误的情况，不让程序通过。</p>
+<pre><code>try &#123;
+      ......
+// throw Exception
+&#125;
+catch(Exception ex)
+&#123;
+    // find Exception
+      // hand of it
+&#125;
+</code></pre>
+<p>“declared to be thrown”指的是“必须显式地声明某个函数可能会向外部抛出一个异常”，也即是说，如果一个函数内部，它可能抛出了一种类型的异常，但该函数内部又不想用catch处理这种类型的异常，此时，它就必须（强制性）使用throws关键字来显式地声明该函数可能会向外部抛出一个异常，以便该函数的调用者知晓并能够及时处理这种类型的异常。如下列代码：</p>
+<pre><code>class MyException extends Exception &#123;
+  MyException() &#123;
+  &#125;
+ &#125;
+class My1Exception extends Exception &#123;
+  My1Exception() &#123;
+  &#125;
+ &#125;
+class A &#123;
+ public int format(String str) &#123;
+      int i = Integer.valueof(str);
+      // throw new MyException();
+      return i;
+ &#125;
+ public static void testTester() throws MyException, My1Exception &#123;
+ new A().format(&quot;S&quot;);
+ &#125;
+&#125;
+public class Test
+&#123;
+ public static void main(String[] args) throws MyException, My1Exception &#123;
+      A.testTester();
+ &#125;
+&#125;
+</code></pre>
+<p>5.RuntimeException异常</p>
+<p>在Java异常处理中，一般有两类异常：其一，就是通过throw语句，程序员在代码中人为抛出的异常（由于运行时动态地监测到了一个错误）；另外一个是系统运行时异常，例如，“被零除”、“空字符串”、“无效句柄”等，对于这类异常，程序员实际上完全可以避免它，只要我们写代码时足够小心严谨。因此，为了彻底解决这种隐患，提高程序整体可靠性（不至于因为编码时考虑不周或一个小疏忽导致系统运行时崩溃），使用RuntimeException异常就是为了实现这样的功能。</p>
+<p>Java语言中的这两种异常中，前者叫checked exception，它是从java.lang. Exception类衍生出来的；后者叫runtime exception，它是从java.lang.Runtime Exception类衍生出来的。<br>下面就是一个被零除的例子：</p>
+<pre><code>public class Test &#123;
+ public static void main(String[] args) &#123;
+    test();
+&#125;
+static void test() &#123;
+    int i = 4;
+    int j = 0;
+    //运行时，这里将触发了一个ArithmeticException
+    //ArithmeticException从RuntimeException派生而来
+    System.out.println(&quot;i / j = &quot; + i / j);
+ &#125;
+&#125;
+</code></pre>
+<p>运行结果如下：</p>
+<pre><code>java.lang.ArithmeticException: / by zero
+at Test.test(Test.java:16)
+at Test.main(Test.java:8)
+Exception in thread &quot;main&quot;
+</code></pre>
+<p>下面是一个空String的例子：</p>
+<pre><code>import java.io.＊;
+public class Test
+&#123;
+ public static void main(String[] args)
+ &#123;
+    test();
+ &#125;
+ static void test()
+ &#123;
+    String str = null;
+    str.compareTo(&quot;abc&quot;);
+    // 运行时，这里将触发了一个NullPointerException
+    // NullPointerException从RuntimeException派生而来
+ &#125;
+&#125;
+</code></pre>
+<p>针对RuntimeException类型的异常，javac是无法通过编译时的静态语法检测来判断到底哪些函数（或哪些区域的代码）可能抛出这类异常（这完全取决于运行时状态，或者说运行态所决定的），也正因为如此，Java异常处理模型中的“must be caught or declared to be thrown”规则也不适用于RuntimeException。但是Java虚拟机却需要有效地捕获并处理此类异常。当然，RuntimeException也可以被程序员显式地抛出，而且为了程序的可靠性，对一些可能出现“运行时异常（RuntimeException）”的代码区域，程序员最好能够及时地处理这些意外的异常，即通过catch（RuntimeExcetion）或catch（Exception）来捕获它们。如下面的示例程序，代码如下：</p>
+<pre><code>import java.io.＊;
+public class Test
+&#123;
+ public static void main(String[] args)
+ &#123;
+      try
+      &#123;
+        test();
+      &#125;
+      catch (Exception e)
+      &#123;
+          System.out.println(&quot;A Exception!&quot;);
+          e.printStackTrace();
+      &#125;
+  &#125;
+  static void test() throws RuntimeException
+  &#123;
+      String str = null;
+      str.compareTo(&quot;abc&quot;);
+  &#125;
+&#125;
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/06/19/java/Java%E5%BC%82%E5%B8%B8/" data-id="ckn31pgrh005iyas61ra0ghxn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/19/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数据类型的转换
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/14/java/java_final_finalize/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">final、finally、finalize</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Patterns/" rel="tag">Design Patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/" rel="tag">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/" rel="tag">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sort/" rel="tag">Sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ali-weixin-pay/" rel="tag">ali/weixin pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elasticsearch/" rel="tag">elasticsearch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/go/" rel="tag">go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/" rel="tag">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logstash/" rel="tag">logstash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/" rel="tag">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytest/" rel="tag">pytest</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/util/" rel="tag">util</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/" rel="tag">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" rel="tag">我的世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" rel="tag">消息队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-Patterns/" style="font-size: 16.36px;">Design Patterns</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Html/" style="font-size: 10px;">Html</a> <a href="/tags/Http/" style="font-size: 12.73px;">Http</a> <a href="/tags/JavaScript/" style="font-size: 15.45px;">JavaScript</a> <a href="/tags/Sort/" style="font-size: 18.18px;">Sort</a> <a href="/tags/algorithm/" style="font-size: 11.82px;">algorithm</a> <a href="/tags/ali-weixin-pay/" style="font-size: 13.64px;">ali/weixin pay</a> <a href="/tags/docker/" style="font-size: 17.27px;">docker</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a> <a href="/tags/go/" style="font-size: 11.82px;">go</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/jvm/" style="font-size: 11.82px;">jvm</a> <a href="/tags/linux/" style="font-size: 18.18px;">linux</a> <a href="/tags/logstash/" style="font-size: 12.73px;">logstash</a> <a href="/tags/mysql/" style="font-size: 14.55px;">mysql</a> <a href="/tags/php/" style="font-size: 11.82px;">php</a> <a href="/tags/pytest/" style="font-size: 10px;">pytest</a> <a href="/tags/python/" style="font-size: 13.64px;">python</a> <a href="/tags/springboot/" style="font-size: 17.27px;">springboot</a> <a href="/tags/util/" style="font-size: 19.09px;">util</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/wechat/" style="font-size: 10.91px;">wechat</a> <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" style="font-size: 10px;">我的世界</a> <a href="/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" style="font-size: 10.91px;">消息队列</a> <a href="/tags/%E7%BA%BF%E7%A8%8B/" style="font-size: 11.82px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/17/linux/linux_shell/">linux—shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/16/linux/linux_awk_sed/">linux-awk\sed 示例</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/11/linux/linux_bash/">linux—bash</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/16/go%E5%9F%BA%E7%A1%80/">go基础知识</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 v<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
